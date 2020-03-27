@@ -9,7 +9,8 @@ package com.likelxl.example.algorithmdemo;
 public class HeapSortDemo {
 
     public static void main(String[] args) {
-        int[] b = {49, 38, 65, 97, 76, 13, 27, 50};
+//        int[] b = {49, 38, 65, 97, 76, 13, 27, 50};
+        int[] b = {49, 60, 65, 97, 76, 13, 98, 50};
         heapSort(b, b.length - 1);
         for (int w : b)
             System.out.print(" " + w);
@@ -30,8 +31,9 @@ public class HeapSortDemo {
         int temp, j;
         temp = a[start];
         for (j = 2 * start; j <= len; j *= 2) {   /*从index最大的有孩子的节点开始筛选，堆排*/
-            if (j < len && a[j] < a[j + 1])    /*是index=j的元素为较大的元素*/
-                j++;
+            if (j < len && a[j] < a[j + 1])    /*是index=j的元素为较大的元素 */
+                j++; // 这个判断的作用是查找 a[2*start] 和 a[2*start+1] 中较大的，然后后面需要用较大的和 a[start]比较
+                    // 如果是小顶堆，那么这里就是要比较出最小的
             if (temp >= a[j])
                 break;
             a[start] = a[j];            /*将较大元素赋值给父节点*/
