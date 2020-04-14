@@ -1,10 +1,10 @@
 package com.likelxl.example.algorithmdemo;
 
+
+
 import com.alibaba.fastjson.JSON;
-import net.minidev.json.JSONUtil;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class test {
@@ -62,6 +62,7 @@ public class test {
         String str_11 = "11";
         System.out.println("11 ‘s hash is : "+ str_11.hashCode());
     }
+
 
     @Test
     public  void testMap(){
